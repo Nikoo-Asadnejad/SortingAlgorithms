@@ -30,4 +30,24 @@ public static class SortMethods
     return list;
   }
 
+
+  public static IList<T> InsertionSort<T>(this IList<T> list) where T : IComparable
+  {
+
+    for (int index = 1; index < list.Count; index++)
+    {
+      int j = index;
+      while (j > 0 && list[j].CompareTo(list[j-1]) < 0)
+      {
+        T temp = list[j - 1];
+        list[j - 1] = list[j];
+        list[j] = temp;
+        j--;
+      }
+    }
+
+    return list;
+  }
+
+
 }
