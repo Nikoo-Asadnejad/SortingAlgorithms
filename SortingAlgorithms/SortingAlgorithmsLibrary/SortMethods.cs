@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,8 +24,7 @@ public static class SortMethods
           minIndex = j;
         }
       }
-      list[minIndex] = list[index];
-      list[index] = minValue;
+      list.Swap(firstIndex :  index, secondIndex :minIndex);
     }
 
     return list;
@@ -38,9 +38,7 @@ public static class SortMethods
       int j = index;
       while (j > 0 && list[j].CompareTo(list[j-1]) < 0)
       {
-        T temp = list[j - 1];
-        list[j - 1] = list[j];
-        list[j] = temp;
+        list.Swap(firstIndex: j-1 , secondIndex : j);
         j--;
       }
     }
@@ -59,9 +57,7 @@ public static class SortMethods
         if (list[j+1].CompareTo(list[j]) < 0)
         {
           hasChanged = true;
-          T temp = list[j];
-          list[j] = list[j + 1];
-          list[j + 1] = temp;
+          list.Swap(firstIndex : j , secondIndex : j + 1);
         }
       }
 
@@ -70,6 +66,14 @@ public static class SortMethods
     }
 
     return list;
+  }
+
+
+  private static void Swap<T>( this IList<T> list, int firstIndex , int secondIndex)
+  {
+    T temp = list[firstIndex];
+    list[firstIndex] = list[secondIndex];
+    list[secondIndex] = temp;
   }
 
 }
