@@ -30,7 +30,6 @@ public static class SortMethods
     return list;
   }
 
-
   public static IList<T> InsertionSort<T>(this IList<T> list) where T : IComparable
   {
 
@@ -49,5 +48,28 @@ public static class SortMethods
     return list;
   }
 
+  public static IList<T> BubbleSort<T>(this IList<T> list) where T : IComparable
+  {
+
+    for (int index = 0; index < list.Count; index++)
+    {
+      bool hasChanged = false;
+      for (int j = 0; j < list.Count -1; j++)
+      {
+        if (list[j+1].CompareTo(list[j]) < 0)
+        {
+          hasChanged = true;
+          T temp = list[j];
+          list[j] = list[j + 1];
+          list[j + 1] = temp;
+        }
+      }
+
+      if (!hasChanged)
+        break;
+    }
+
+    return list;
+  }
 
 }
