@@ -1,0 +1,12 @@
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\bin\Debug\net6.0\SortingAlgorithmsLibrary.deps.json
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\bin\Debug\net6.0\SortingAlgorithmsLibrary.dll
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\bin\Debug\net6.0\SortingAlgorithmsLibrary.pdb
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\SortingAlgorithmsLibrary.csproj.AssemblyReference.cache
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\SortingAlgorithmsLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\SortingAlgorithmsLibrary.AssemblyInfoInputs.cache
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\SortingAlgorithmsLibrary.AssemblyInfo.cs
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\SortingAlgorithmsLibrary.csproj.CoreCompileInputs.cache
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\SortingAlgorithmsLibrary.dll
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\refint\SortingAlgorithmsLibrary.dll
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\SortingAlgorithmsLibrary.pdb
+D:\web development\projects\SortingAlgoriths\SortingAlgorithms\SortingAlgorithmsLibrary\obj\Debug\net6.0\ref\SortingAlgorithmsLibrary.dll
