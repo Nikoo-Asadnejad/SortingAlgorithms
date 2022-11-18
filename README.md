@@ -1,1 +1,1 @@
-# SortingAlgoriths
+# SortingAlgorithms
