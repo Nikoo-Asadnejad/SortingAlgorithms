@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -68,7 +69,47 @@ public static class SortMethods
     return list;
   }
 
+  public static IList<T> QuickSort<T>(this IList<T> list) where T : IComparable
+  {
+    list.QuickSort(0, list.Count - 1);
+    return list;
+  }
 
+
+  private static IList<T> QuickSort<T>(this IList<T> list , int subArrayFirstIndex , int subArrayLastIndex) where T : IComparable
+  {
+    if(subArrayFirstIndex < subArrayLastIndex)
+    {
+      int pivot = list.Partition(subArrayFirstIndex, subArrayLastIndex);
+      list.QuickSort(subArrayFirstIndex , pivot);
+      list.QuickSort(pivot + 1 , subArrayLastIndex);
+    }
+
+    return list;
+  }
+
+  private static int Partition<T>(this IList<T> list, int firstIndex , int lastIndex) where T : IComparable
+  {
+    T pivot = list[(int)((lastIndex + firstIndex) / 2)];
+    while (firstIndex < lastIndex)
+    {
+      while (list[firstIndex].CompareTo(pivot) < 0) firstIndex++;
+      while (list[lastIndex].CompareTo(pivot) > 0) lastIndex--;
+      if (lastIndex <= firstIndex) break;
+      list.Swap(firstIndex, lastIndex);
+    }
+
+    //do
+    //  {
+    //    while (list[firstIndex].CompareTo(pivot) < 0) firstIndex++;
+    //    while (list[lastIndex].CompareTo(pivot) > 0) lastIndex--;
+    //    if (lastIndex <= firstIndex) break;
+    //    list.Swap(firstIndex, lastIndex);
+    //  }
+    //  while (firstIndex <= lastIndex);
+
+    return lastIndex;
+  }
   private static void Swap<T>( this IList<T> list, int firstIndex , int secondIndex)
   {
     T temp = list[firstIndex];
