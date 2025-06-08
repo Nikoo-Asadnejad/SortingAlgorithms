@@ -11,7 +11,7 @@ public static class SortMethods
 {
   public static IList<T> SelectionSort<T>(this IList<T> list) where T : IComparable
   {
-   
+   // 2,3,7,1,3,5
     for(int index = 0 ; index < list.Count; index ++)
     {
       int minIndex = index;
@@ -74,7 +74,31 @@ public static class SortMethods
     list.QuickSort(0, list.Count - 1);
     return list;
   }
+ 
+    public static void Sort(int[] array) => MergeSortRecursive(array, 0, array.Length - 1);
 
+    private static void MergeSortRecursive(int[] array, int left, int right)
+    {
+      if (left >= right) return;
+      int mid = (left + right) / 2;
+      MergeSortRecursive(array, left, mid);
+      MergeSortRecursive(array, mid + 1, right);
+      Merge(array, left, mid, right);
+    }
+
+    private static void Merge(int[] array, int left, int mid, int right)
+    {
+      int[] leftArr = array[left..(mid + 1)];
+      int[] rightArr = array[(mid + 1)..(right + 1)];
+      int i = 0, j = 0, k = left;
+
+      while (i < leftArr.Length && j < rightArr.Length)
+        array[k++] = leftArr[i] <= rightArr[j] ? leftArr[i++] : rightArr[j++];
+
+      while (i < leftArr.Length) array[k++] = leftArr[i++];
+      while (j < rightArr.Length) array[k++] = rightArr[j++];
+    }
+  
 
   private static IList<T> QuickSort<T>(this IList<T> list , int subArrayFirstIndex , int subArrayLastIndex) where T : IComparable
   {

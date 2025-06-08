@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1T39DAi7P/LrrnTFJST1gojYZChFFlac8/cgt8CBpX9dSwNCHFmnbgKZjg4br36CBl6J9SZ5hJt9GXPJm4qLnQ==",
+  "dgSpecHash": "h/GELq5dUx8=",
   "success": true,
-  "projectFilePath": "D:\\web development\\projects\\SortingAlgoriths\\SortingAlgorithms\\SortingAlgorithmsLibrary\\SortingAlgorithmsLibrary.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/macbook/Projects/SortingAlgorithms/SortingAlgorithms/SortingAlgorithmsLibrary/SortingAlgorithmsLibrary.csproj",
+  "expectedPackageFiles": [
+    "/Users/macbook/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/macbook/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
   "logs": []
 }
